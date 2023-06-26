@@ -16,3 +16,4 @@ Current Features:<br />
 - Uses Cookies To Save Log-in Information, Current User Playing, And Latest High-Score.
 - Uses MySQL To Store And Retrieve User Data.
 - Uses Wide Variety Of Imported Fonts To Make The Game Attractive.
+- - - -
