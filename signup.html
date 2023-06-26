@@ -1,0 +1,83 @@
+<html>
+  <head>
+    <title>
+        Flappy Birds - Best Online Version
+    </title>
+    <style>
+      fieldset{
+          background-color: beige;
+          border: none;
+          border-radius: 2px;
+          margin-bottom: 12px;
+          overflow: hidden;
+          padding: 0 .625em;
+      }
+
+      label{
+          font-family:"tahoma";
+          cursor: pointer;
+          display: inline-block;
+          padding: 3px 6px;
+          text-align: left;
+          width: 150px;
+          vertical-align: top;
+          color: beige;
+      }
+
+      input{
+          font-size: inherit;
+          display:inline-block;
+          text-align: center;
+          vertical-align: center;
+          margin: 0 auto;
+      }
+      
+      .head {
+          text-align:center;
+          color: beige;
+      }
+      
+      .sa {
+        text-align:center;
+      }
+      
+    </style>
+  </head>
+  <form action="sign.php" method="post" style=background-color:aqua>
+    <h1 class="head"><b>Sign Up:-</b></h1>
+    <div>
+      <h2 style="color: beige;"><b>Primary Details: </b></h2>
+      <label for="fname"><b>First name: </b></label>
+      <input type="text" id="fname" name="firstname" required><br><br>
+      <label for="lname"><b>Last name: </b></label>
+      <input type="text" id="lname" name="lastname"><br><br>
+      <label for="email"><b>Email: </b></label>
+      <input type="email" id="email" name="Email" required><br><br>
+      <h3 style="color:beige;"><b>Gender: </b></h3>
+      <input type="radio" id="male" name="gender" value="Male">
+      <label for="male">Male</label><br>
+      <input type="radio" id="female" name="gender" value="Female">
+      <label for="female">Female</label><br>
+      <input type="radio" id="others" name="gender" value="Others">
+      <label for="others">Others</label><br><br>
+      <label for="password"><b>Enter a Password: </b></label>
+      <input type="password" id="password" name="password" required><br>
+      <label for="rpassword"><b>Re-Enter The Password: </b></label>
+      <input type="password" id="rpassword" name="rpassword" required oninput="check(this)"><br><br>
+      <script>
+        function check(input) {
+            if (document.getElementById('rpassword').value != document.getElementById('password').value) {
+                input.setCustomValidity('Password Must be Matching.');
+            } else {
+                input.setCustomValidity('');
+            }
+        }
+    </script>
+    </div>
+    <h3 style="color:beige; text-align:center;">By creating an account you agree to our Terms & Conditions.</h3><br>
+    <div class="sa">
+      <input type="submit" value="Already Have An Account?" onclick="location.href='login.php'">
+      <input style="background-color:blue; color:white;" type="submit" value="Sign In">
+    </div>
+  </form>
+</html>
